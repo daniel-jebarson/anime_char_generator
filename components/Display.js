@@ -14,7 +14,9 @@ function Display(props) {
   const descripter = (arr) => {
     let t = "";
     arr.map((str, index) => {
-      t += str["fact"] + ". ";
+      if (index < 6) {
+        t += str["fact"] + ". ";
+      }
     });
     return t;
   };
