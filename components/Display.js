@@ -1,5 +1,4 @@
 import { Container, Image, Center, Grid, GridItem } from "@chakra-ui/react";
-
 function Display(props) {
   const { name, data } = props;
   //   const x = name + " exists with image as " + data.img;
@@ -21,8 +20,21 @@ function Display(props) {
   };
 
   return (
-    <Container mt="150px" backgroundColor="#685555" maxW="850px">
-      <Center h="50px" color="white">
+    <Container
+      border={"2px solid grey"}
+      mt="150px"
+      backgroundColor="#413c3c"
+      maxW="850px"
+      borderRadius={"20px"}
+    >
+      <Center
+        h="50px"
+        color="black"
+        fontStyle={"italic"}
+        fontSize="4xl"
+        fontWeight={"bold"}
+        mt={"4px"}
+      >
         {capitalizer(name)}
       </Center>
 
