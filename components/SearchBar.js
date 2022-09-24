@@ -6,15 +6,27 @@ import {
   IconButton,
   Container,
 } from "@chakra-ui/react";
-
+import Router from "next/router";
+import Axios from "axios";
 import { useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
+
   const logging = () => {
-    console.log(query);
+    // console.log(query);
+    // RequestSent();
+    sendProps();
   };
+
+  const sendProps = () => {
+    Router.push({
+      pathname: `/search/${query}`,
+      //   query: { query },
+    });
+  };
+
   return (
     <Container maxW="550px" color="white" mt="150px">
       <InputGroup size="md" w="550px">
