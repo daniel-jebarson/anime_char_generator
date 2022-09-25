@@ -1,6 +1,17 @@
-import { Container, Image, Center, Grid, GridItem } from "@chakra-ui/react";
+import {
+  Container,
+  Image,
+  Center,
+  Grid,
+  GridItem,
+  useColorModeValue,
+  scaleFadeConfig,
+} from "@chakra-ui/react";
+import { animate, transform } from "framer-motion";
 function Display(props) {
   const { name, data } = props;
+  const bg = useColorModeValue("#9ac5cd", "#413c3c");
+
   //   const x = name + " exists with image as " + data.img;
   const capitalizer = (str) => {
     const arr = str.split("_");
@@ -25,13 +36,20 @@ function Display(props) {
     <Container
       border={"2px solid grey"}
       mt="150px"
-      backgroundColor="#413c3c"
+      backgroundColor={bg}
       maxW="850px"
+      _hover={{
+        bg: "#9fa969",
+        maxW: "865px",
+        h: "460px",
+        color: "#5a583b",
+        transitionDuration: "200ms",
+      }}
       borderRadius={"20px"}
     >
       <Center
         h="50px"
-        color="black"
+        // color="black"
         fontStyle={"italic"}
         fontSize="4xl"
         fontWeight={"bold"}
