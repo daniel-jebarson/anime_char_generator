@@ -16,7 +16,7 @@ function ErrorPage() {
       <Divider orientation="vertical" />
       <Alert status="error" maxW={"250px"}>
         <AlertIcon />
-        NO SUCH ANIME EXISTS!
+        NO SUCH ANIME EXIST!
       </Alert>
     </Center>
   );
